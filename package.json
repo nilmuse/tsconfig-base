@@ -1,0 +1,45 @@
+{
+  "name": "@ux-ui/tsconfig-base",
+  "version": "0.1.0",
+  "description": "Shared base tsconfig for the ux-ui-pro npm portfolio (assembly.md §7).",
+  "type": "module",
+  "author": "ux-ui.pro",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ux-ui-pro/tsconfig-base.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ux-ui-pro/tsconfig-base/issues"
+  },
+  "homepage": "https://github.com/ux-ui-pro/tsconfig-base",
+  "packageManager": "npm@10.9.3",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "exports": {
+    "./tsconfig.json": "./tsconfig.json"
+  },
+  "scripts": {
+    "pack:check": "npm pack --dry-run && publint",
+    "verify": "npm run pack:check",
+    "prepublishOnly": "npm run verify"
+  },
+  "files": [
+    "tsconfig.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "publint": "^0.3.21"
+  },
+  "keywords": [
+    "tsconfig",
+    "typescript",
+    "config",
+    "ux-ui-pro"
+  ]
+}
