@@ -1,18 +1,18 @@
 {
   "name": "@ux-ui/tsconfig-base",
-  "version": "0.1.0",
-  "description": "Shared base tsconfig for the ux-ui-pro npm portfolio (assembly.md §7).",
+  "version": "0.1.1",
+  "description": "Shared base tsconfig for the nilmuse npm portfolio (assembly.md §7).",
   "type": "module",
-  "author": "ux-ui.pro",
+  "author": "Maxim <m@nilmuse.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ux-ui-pro/tsconfig-base.git"
+    "url": "git+https://github.com/nilmuse/tsconfig-base.git"
   },
   "bugs": {
-    "url": "https://github.com/ux-ui-pro/tsconfig-base/issues"
+    "url": "https://github.com/nilmuse/tsconfig-base/issues"
   },
-  "homepage": "https://github.com/ux-ui-pro/tsconfig-base",
+  "homepage": "https://github.com/nilmuse/tsconfig-base",
   "packageManager": "npm@10.9.3",
   "engines": {
     "node": ">=20.19.0"
@@ -40,6 +40,6 @@
     "tsconfig",
     "typescript",
     "config",
-    "ux-ui-pro"
+    "nilmuse"
   ]
 }

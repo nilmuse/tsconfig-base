@@ -1,6 +1,6 @@
 # @ux-ui/tsconfig-base
 
-Shared base `tsconfig.json` for the `ux-ui-pro` npm portfolio. Encodes the TypeScript
+Shared base `tsconfig.json` for the `nilmuse` npm portfolio. Encodes the TypeScript
 compiler options fixed by the build standard (`assembly.md` §7) so packages inherit them
 instead of copy-pasting.
 
