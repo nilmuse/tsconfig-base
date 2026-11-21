@@ -1,4 +1,4 @@
-# @ux-ui/tsconfig-base
+# @nilmuse/tsconfig-base
 
 Shared base `tsconfig.json` for the `nilmuse` npm portfolio. Encodes the TypeScript
 compiler options fixed by the build standard (`assembly.md` §7) so packages inherit them
@@ -9,7 +9,7 @@ instead of copy-pasting.
 ## Installation
 
 ```bash
-npm install -D @ux-ui/tsconfig-base
+npm install -D @nilmuse/tsconfig-base
 ```
 
 ---
@@ -20,7 +20,7 @@ In a package `tsconfig.json`:
 
 ```json
 {
-  "extends": "@ux-ui/tsconfig-base/tsconfig.json",
+  "extends": "@nilmuse/tsconfig-base/tsconfig.json",
   "compilerOptions": {
     "rootDir": ".",
     "outDir": "dist"
