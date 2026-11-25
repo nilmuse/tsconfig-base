@@ -1,8 +1,10 @@
 # @nilmuse/tsconfig-base
 
-Shared base `tsconfig.json` for the `nilmuse` npm portfolio. Encodes the TypeScript
-compiler options fixed by the build standard (`assembly.md` §7) so packages inherit them
-instead of copy-pasting.
+Shared TypeScript compiler settings for the `nilmuse` npm packages. Extend the base and keep
+source paths and build-specific settings in your project's config.
+
+[![npm](https://img.shields.io/npm/v/@nilmuse/tsconfig-base.svg?colorB=brightgreen)](https://www.npmjs.com/package/@nilmuse/tsconfig-base)
+[![NPM Downloads](https://img.shields.io/npm/dm/@nilmuse/tsconfig-base.svg?style=flat)](https://www.npmjs.com/package/@nilmuse/tsconfig-base)
 
 ---
 
@@ -12,11 +14,9 @@ instead of copy-pasting.
 npm install -D @nilmuse/tsconfig-base
 ```
 
----
+## Quick start
 
-## Usage
-
-In a package `tsconfig.json`:
+Create `tsconfig.json` in your project. Adjust `include` to match your source and config files:
 
 ```json
 {
@@ -29,13 +29,22 @@ In a package `tsconfig.json`:
 }
 ```
 
-The base sets only the shared compiler options (`target`, `module`, `moduleResolution`,
-`strict`, `isolatedModules`, `verbatimModuleSyntax`, `lib`, `skipLibCheck`, etc.). Per-package
-concerns — `rootDir`/`outDir`, `include`, declaration emit, and the opt-in
-`noUnusedLocals`/`noUnusedParameters` (§7) — stay in the package's own config.
+TypeScript inherits the shared compiler options and uses the paths from your own config.
 
-The companion `tsconfig.build.json` (public `src` only) is defined per package and extends
-the package `tsconfig.json`:
+## Configuration
+
+The base targets ES2022, uses ESNext modules with `bundler` resolution, and includes the
+ES2022, DOM, and DOM.Iterable libraries. It enables strict checking, `isolatedModules`,
+`verbatimModuleSyntax`, `esModuleInterop`, `forceConsistentCasingInFileNames`, and
+`resolveJsonModule`, with `skipLibCheck: true`.
+
+Set `rootDir`, `outDir`, `include`, and declaration output in your project's config.
+`noUnusedLocals` and `noUnusedParameters` are opt-in settings.
+
+### Build config
+
+For a build that reads source files from `src`, add `tsconfig.build.json` alongside
+`tsconfig.json`:
 
 ```json
 {
@@ -44,8 +53,6 @@ the package `tsconfig.json`:
   "include": ["src"]
 }
 ```
-
----
 
 ## License
 
