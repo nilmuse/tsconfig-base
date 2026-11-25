@@ -1,6 +1,6 @@
 {
   "name": "@nilmuse/tsconfig-base",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Shared base tsconfig for the nilmuse npm portfolio (assembly.md §7).",
   "type": "module",
   "author": "Maxim <m@nilmuse.com>",
